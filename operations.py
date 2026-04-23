@@ -1,0 +1,37 @@
+def add_matrix(a, b):
+    result = []
+    for i in range(len(a)):
+        row = []
+        for j in range(len(a[0])):
+            row.append(a[i][j] + b[i][j])
+        result.append(row)
+    return result
+
+
+def subtract_matrix(a, b):
+    result = []
+    for i in range(len(a)):
+        row = []
+        for j in range(len(a[0])):
+            row.append(a[i][j] - b[i][j])
+        result.append(row)
+    return result
+
+
+def multiply_matrix(a, b):
+    result = []
+    for i in range(len(a)):
+        row = []
+        for j in range(len(b[0])):
+            total = 0
+            for k in range(len(b)):
+                total += a[i][k] * b[k][j]
+            row.append(total)
+        result.append(row)
+    return result
+
+
+def display_matrix(matrix):
+    for row in matrix:
+        print(row)
+    print()
